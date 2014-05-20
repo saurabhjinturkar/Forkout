@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <ListView
+        android:id="@+id/groups"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/form"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/bg1"
+        android:smoothScrollbar="true" >
+
+    </ListView>
+
+    <RelativeLayout
+        android:id="@+id/form"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:orientation="vertical" >
+
+        <EditText
+            android:id="@+id/groupdescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/groupamount"
+            android:layout_alignBottom="@+id/groupamount"
+            android:layout_toLeftOf="@+id/groupsubmit"
+            android:layout_toRightOf="@+id/groupamount"
+            android:ems="10"
+            android:hint="Description"
+            android:inputType="textMultiLine"
+            android:width="100dp" />
+
+        <Button
+            android:id="@+id/groupsubmit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/ic_action_social_send_now"
+            android:minHeight="32dp"
+            android:minWidth="32dp" />
+
+        <EditText
+            android:id="@+id/groupamount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/groupsubmit"
+            android:layout_alignParentLeft="true"
+            android:hint="Amount"
+            android:inputType="numberDecimal"
+            android:maxLines="1"
+            android:width="100dp" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

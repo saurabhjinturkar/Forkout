@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Forkout</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_list">Lists</string>
+    <string name="title_activity_group_chat">GroupChatActivity</string>
+    <string name="sumbit">sumbit</string>
+    <string name="title_activity_chat">ChatActivity</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="contact_no_">Contact No.</string>
+    <string name="dob_">DOB:</string>
+    <string name="add_group">ADD GROUP</string>
+    <string name="title_activity_contact_list">Forkout</string>
+    <string name="title_activity_add_group">AddGroupActivity</string>
+    <string name="title_activity_group_members">GroupMembersActivity</string>
+    <string name="title_activity_friends">FriendsActivity</string>
+    <string name="title_activity_report">ReportActivity</string>
+    <string name="title_activity_contacts">ContactsActivity</string>
+
+</resources>

@@ -1,0 +1,14 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/report_generate"
+        android:checkable="true"
+        android:enabled="true"
+        android:icon="@drawable/report"
+        android:showAsAction="always"
+        android:title="Report"
+        android:titleCondensed="Next"
+        android:visible="true">
+    </item>
+
+</menu>

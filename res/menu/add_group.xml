@@ -1,0 +1,14 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/add_group_next"
+        android:checkable="true"
+        android:enabled="true"
+        android:showAsAction="always"
+        android:title="Next"
+        android:titleCondensed="Next"
+        android:icon="@drawable/ic_action_navigation_next_item"
+        android:visible="true">
+    </item>
+
+</menu>
