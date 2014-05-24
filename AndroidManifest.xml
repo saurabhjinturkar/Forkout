@@ -76,7 +76,9 @@
         </activity>
         <activity
             android:name="com.example.paypro.ReportActivity"
-            android:label="@string/title_activity_report" >
+            android:parentActivityName="com.example.paypro.ChatActivity"
+            android:label="@string/title_activity_report" 
+            android:windowSoftInputMode="adjustResize|stateVisible">
         </activity>
         <activity
             android:name="com.example.paypro.SettingsActivity"

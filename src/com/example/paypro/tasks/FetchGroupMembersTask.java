@@ -141,8 +141,7 @@ public class FetchGroupMembersTask extends AsyncTask<Void, Void, Void> {
 			e.printStackTrace();
 		}
 		Intent i = new Intent(context, GroupListActivity.class);
-		i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-		i.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
+		i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
 		context.startActivity(i);
 	}
 }

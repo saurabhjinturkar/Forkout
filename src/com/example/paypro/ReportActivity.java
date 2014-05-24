@@ -4,10 +4,10 @@ import java.util.List;
 
 import android.R.color;
 import android.app.Activity;
-import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
-import android.view.LayoutInflater;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup.LayoutParams;
 import android.widget.LinearLayout;
@@ -44,7 +44,7 @@ public class ReportActivity extends Activity {
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.report, menu);
-		return false;
+		return true;
 	}
 
 	public void setReport(Report report) {
@@ -100,4 +100,15 @@ public class ReportActivity extends Activity {
 		}
 		layout.refreshDrawableState();
 	}
+
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		switch(item.getItemId()){
+		case android.R.id.home:
+			super.onBackPressed();
+			return true;
+		}
+		return super.onOptionsItemSelected(item);
+	}
+	
 }

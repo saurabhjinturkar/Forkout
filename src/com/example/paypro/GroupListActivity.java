@@ -58,7 +58,6 @@ public class GroupListActivity extends Activity {
 				i.putExtra("group", group);
 				i.setAction(Intent.ACTION_VIEW);
 				startActivity(i);
-				finish();
 			}
 		});
 		

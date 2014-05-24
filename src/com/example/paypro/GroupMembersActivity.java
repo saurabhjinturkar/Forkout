@@ -81,7 +81,7 @@ public class GroupMembersActivity extends Activity {
 		
 		Intent intent = new Intent();
 		intent.setClass(getApplicationContext(), GroupListActivity.class);
-//		intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+		intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
 		intent.setAction(Intent.ACTION_VIEW);
 
 		intent.putExtra("group", group);
