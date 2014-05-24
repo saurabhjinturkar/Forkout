@@ -101,6 +101,9 @@ public class GroupMembersActivity extends Activity {
 	@Override
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 		// super.onActivityResult(requestCode, resultCode, data);
+		if (data == null) {
+			return;
+		}
 		ArrayList<User> selection = (ArrayList<User>) data
 				.getSerializableExtra("selection");
 		Log.w("Group selection", "" + selection);

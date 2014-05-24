@@ -15,27 +15,23 @@
         android:layout_height="match_parent"
         android:orientation="vertical" >
 
-         <EditText
-             android:id="@+id/searchText"
-             android:layout_width="wrap_content"
-             android:layout_height="wrap_content"
-             android:layout_gravity="center"
-             android:ems="10"
-             android:hint="Enter name to search"
-             android:inputType="textPersonName" />
+        <EditText
+            android:id="@+id/searchText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:ems="10"
+            android:hint="Enter name to search"
+            android:inputType="textPersonName" />
 
-         <ListView
-             android:id="@+id/contactList"
-             android:layout_width="match_parent"
-             android:layout_height="wrap_content"
-             android:paddingLeft="5dp"
-             android:paddingRight="5dp"
-             android:paddingTop="20dp" >
-
-         </ListView>
-
+        <ListView
+            android:id="@+id/contactList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingTop="20dp" >
+        </ListView>
     </LinearLayout>
-
-   
 
 </RelativeLayout>

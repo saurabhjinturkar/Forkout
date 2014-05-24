@@ -141,4 +141,8 @@ public class ContactsAdapter extends ArrayAdapter<User> {
 			notifyDataSetChanged();
 		}
 	}
+	
+	public void setContacts(List<User> contacts) {
+		this.contacts = contacts;
+	}
 }

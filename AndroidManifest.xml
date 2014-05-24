@@ -88,7 +88,7 @@
         </activity>
 
         <receiver
-            android:name=".gcm.GcmBroadcastReceiver"
+            android:name="com.example.paypro.gcm.GcmBroadcastReceiver"
             android:permission="com.google.android.c2dm.permission.SEND" >
             <intent-filter>
                 <action android:name="com.google.android.c2dm.intent.RECEIVE" />
@@ -97,7 +97,20 @@
             </intent-filter>
         </receiver>
 
-        <service android:name=".gcm.GCMNotificationIntentService" />
+        <service android:name="com.example.paypro.gcm.GCMNotificationIntentService" />
+
+        <activity
+            android:name="com.example.paypro.BaseActivity"
+            android:label="@string/title_activity_base" >
+        </activity>
+        <activity
+            android:name="com.example.paypro.TempBaseActivity"
+            android:label="@string/title_activity_temp_base" >
+        </activity>
+        <activity
+            android:name="com.example.paypro.GroupMemberActivity"
+            android:label="@string/title_activity_group_member" >
+        </activity>
     </application>
 
 </manifest>

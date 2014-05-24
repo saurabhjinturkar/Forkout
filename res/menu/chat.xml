@@ -10,5 +10,6 @@
         android:titleCondensed="Next"
         android:visible="true">
     </item>
+    <item android:id="@+id/group_members" android:orderInCategory="200" android:title="Group members" android:visible="true"></item>
 
 </menu>

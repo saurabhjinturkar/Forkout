@@ -19,5 +19,14 @@
     <string name="title_activity_friends">FriendsActivity</string>
     <string name="title_activity_report">ReportActivity</string>
     <string name="title_activity_contacts">ContactsActivity</string>
+    <string name="title_activity_base">BaseActivity</string>
+    <string name="title_section1">Section 1</string>
+    <string name="title_section2">Section 2</string>
+    <string name="title_section3">Section 3</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="action_example">Example action</string>
+    <string name="title_activity_temp_base">TempBaseActivity</string>
+    <string name="title_activity_group_member">GroupMemberActivity</string>
 
 </resources>

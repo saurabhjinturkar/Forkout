@@ -3,7 +3,6 @@ package com.example.paypro;
 import java.util.ArrayList;
 import java.util.List;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -20,13 +19,11 @@ import com.example.paypro.dataprovider.GroupAdapter;
 import com.example.paypro.dbhandler.GroupsHelper;
 import com.example.paypro.tasks.SignOutTask;
 
-public class GroupListActivity extends Activity {
+public class GroupListActivity extends TempBaseActivity {
 	private ListView lv;
-	private List<Group> groupsList;
 	private static final String ID = "Group List";
 
 	public GroupListActivity() {
-		groupsList = new ArrayList<Group>();
 	}
 
 	@Override
@@ -39,10 +36,7 @@ public class GroupListActivity extends Activity {
 		addGroup1.setText("Add Group");
 		lv.addFooterView(addGroup1);
 		
-		GroupsHelper db = new GroupsHelper(this);
-		groupsList = db.getallgroups();
-		
-		final GroupAdapter adapter = new GroupAdapter(this, groupsList);
+		final GroupAdapter adapter = new GroupAdapter(this);
 		lv.setAdapter(adapter);
 
 		lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -50,7 +44,7 @@ public class GroupListActivity extends Activity {
 			@Override
 			public void onItemClick(AdapterView<?> parent, View view,
 					int position, long id) {
-				final Group group = groupsList.get(position);
+				final Group group = adapter.get(position);
 				System.out.println("item selected " + position + " Group name"
 						+ group);
 				Intent i = new Intent();
@@ -58,7 +52,6 @@ public class GroupListActivity extends Activity {
 				i.putExtra("group", group);
 				i.setAction(Intent.ACTION_VIEW);
 				startActivity(i);
-				finish();
 			}
 		});
 		

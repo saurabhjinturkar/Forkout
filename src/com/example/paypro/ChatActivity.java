@@ -129,11 +129,24 @@ public class ChatActivity extends Activity {
 
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
-		Intent i = new Intent();
-		i.setClass(this, ReportActivity.class);
-		i.setAction(Intent.ACTION_VIEW);
-		i.putExtra("group", group);
-		startActivity(i);
+		
+		switch(item.getItemId()) {
+		case R.id.group_members:
+			Intent i1 = new Intent();
+			i1.setClass(this, GroupMemberActivity.class);
+			i1.setAction(Intent.ACTION_VIEW);
+			i1.putExtra("group", group);
+			startActivity(i1);
+			break;
+		case R.id.report_generate:
+			Intent i = new Intent();
+			i.setClass(this, ReportActivity.class);
+			i.setAction(Intent.ACTION_VIEW);
+			i.putExtra("group", group);
+			startActivity(i);
+			break;
+		}
+		
 		return true;
 	}
 }

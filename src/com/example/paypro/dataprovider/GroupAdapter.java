@@ -9,6 +9,7 @@ import java.util.List;
 
 import com.example.paypro.R;
 import com.example.paypro.data.Group;
+import com.example.paypro.dbhandler.GroupsHelper;
 
 import android.content.Context;
 import android.graphics.Color;
@@ -30,15 +31,16 @@ public class GroupAdapter extends ArrayAdapter<Group> {
 	private Context context;
 	private List<Group> groups;
 	
-	public GroupAdapter(Context context, List<Group> groups) {
+	public GroupAdapter(Context context) {
 		super(context, R.layout.listitem_group);
 		this.context = context;
-		this.groups = groups;
+		GroupsHelper gh = new GroupsHelper(context);
+		this.groups = gh.getallgroups();
 	}
 	
 	@Override
 	public View getView(int position, View convertView, ViewGroup parent) {
-		LayoutInflater inflater = (LayoutInflater) context.getSystemService(context.LAYOUT_INFLATER_SERVICE);
+		LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 		View view = inflater.inflate(R.layout.listitem_group, null);
 		
 		TextView groupName = (TextView) view.findViewById(R.id.group_name);
@@ -82,16 +84,8 @@ public class GroupAdapter extends ArrayAdapter<Group> {
 		super.add(object);
 		groups.add(object);
 	}
+
+	public Group get(int position) {
+		return groups.get(position);
+	}
 }
-// private class StableArrayAdapter extends ArrayAdapter<Group> {
-//
-// HashMap<String, Integer> mIdMap = new HashMap<String, Integer>();
-//
-// public StableArrayAdapter(Context context, int textViewResourceId,
-// List<String> objects) {
-// super(context, textViewResourceId, objects);
-// for (int i = 0; i < objects.size(); ++i) {
-// mIdMap.put(objects.get(i), mygroups.get(i).getGroupId());
-// }
-// }
-// }
