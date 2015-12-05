@@ -44,4 +44,11 @@ public class DBValues {
 		    created_at,
 		    updated_at;
 	}
+	
+	public enum Queue {
+			id,
+			type,
+			object,
+			status;
+	}
 }

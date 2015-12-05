@@ -4,7 +4,9 @@
 package com.example.paypro.data;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 /**
  * @author Saurabh
@@ -22,9 +24,12 @@ public class Transaction implements Serializable{
 	private Date createdAt;
 	private Date updatedAt;
 	
+	private List<Share> shares;
+	
 	private static final long serialVersionUID = 1L;
 	
 	public Transaction() {
+		shares = new ArrayList<Share>();
 	}
 
 	/**
@@ -156,6 +161,19 @@ public class Transaction implements Serializable{
 	public void setUpdatedAt(Date updatedAt) {
 		this.updatedAt = updatedAt;
 	}
+	
+	public List<Share> getShares() {
+		return shares;
+	}
+	
+	public void setShares(List<Share> shares) {
+		this.shares = shares;
+	}
+	 
+	public void addShare(Share share) {
+		this.shares.add(share);
+	}
+	
 	/* (non-Javadoc)
 	 * @see java.lang.Object#hashCode()
 	 */

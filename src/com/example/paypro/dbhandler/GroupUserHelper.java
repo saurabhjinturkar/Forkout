@@ -1,5 +1,5 @@
 /**
- * 
+ *
  */
 package com.example.paypro.dbhandler;
 
@@ -19,7 +19,7 @@ import com.example.paypro.data.User;
 
 /**
  * @author jintu
- * 
+ *
  */
 public class GroupUserHelper extends SQLiteOpenHelper {
 

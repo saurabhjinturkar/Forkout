@@ -28,5 +28,6 @@
     <string name="action_example">Example action</string>
     <string name="title_activity_temp_base">TempBaseActivity</string>
     <string name="title_activity_group_member">GroupMemberActivity</string>
+    <string name="title_activity_friend_transaction">FriendTransactionActivity</string>
 
 </resources>

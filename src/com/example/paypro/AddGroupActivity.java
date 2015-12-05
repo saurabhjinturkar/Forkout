@@ -35,7 +35,7 @@ public class AddGroupActivity extends Activity {
 		case R.id.add_group_next:
 			if (isPageComplete()) {
 				Intent i = new Intent();
-				i.setClass(getApplicationContext(), GroupMembersActivity.class);
+				i.setClass(getApplicationContext(), AddGroupMembersActivity.class);
 				i.setAction(Intent.ACTION_VIEW);
 				group.setName(groupNameText.getText().toString());
 				i.putExtra("group", group);

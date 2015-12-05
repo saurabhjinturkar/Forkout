@@ -208,5 +208,10 @@ public class RegisterActivity extends Activity {
 	public void setContactError(String error) {
 		mContactNoView.setError(error);
 	}
+	
+	@Override
+	public boolean onKeyDown(int keyCode, KeyEvent event) {
+	       return super.onKeyDown(keyCode, event);
+	}
 
 }

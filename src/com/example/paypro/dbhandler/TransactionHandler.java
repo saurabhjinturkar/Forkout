@@ -204,4 +204,8 @@ public class TransactionHandler extends SQLiteOpenHelper {
 	public void flush() {
 		context.deleteDatabase(DATABASE_NAME);
 	}
+
+	public List<Transaction> getTransactionForUsers(long userId1, long userId2) {
+		return null;
+	}
 }

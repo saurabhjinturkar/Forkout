@@ -9,7 +9,9 @@
     <RelativeLayout
         android:id="@+id/relWrapper"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:background="@drawable/chat_yellow"
+        android:paddingRight="20dp" >
 
         <TextView
             android:id="@+id/name"
@@ -24,7 +26,10 @@
             android:layout_alignLeft="@+id/name"
             android:layout_below="@+id/name"
             android:ellipsize="end"
-            android:text="Desc" />
+            android:minLines="1"
+            android:paddingRight="20dp"
+            android:text="Desc"
+            android:textSize="14sp" />
 
         <TextView
             android:id="@+id/date"

@@ -89,7 +89,7 @@ public class LoginActivity extends Activity {
 	protected void gotoregister() {
 		Intent i = new Intent();
 		i.setClass(getApplicationContext(), RegisterActivity.class);
-		i.setAction(Intent.ACTION_VIEW);
+//		i.setAction(Intent.ACTION_VIEW);
 		startActivity(i);
 
 	}

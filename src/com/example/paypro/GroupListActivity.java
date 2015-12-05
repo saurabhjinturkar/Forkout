@@ -1,8 +1,6 @@
 package com.example.paypro;
 
-import java.util.ArrayList;
-import java.util.List;
-
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -16,10 +14,9 @@ import android.widget.ListView;
 
 import com.example.paypro.data.Group;
 import com.example.paypro.dataprovider.GroupAdapter;
-import com.example.paypro.dbhandler.GroupsHelper;
 import com.example.paypro.tasks.SignOutTask;
 
-public class GroupListActivity extends TempBaseActivity {
+public class GroupListActivity extends Activity {
 	private ListView lv;
 	private static final String ID = "Group List";
 

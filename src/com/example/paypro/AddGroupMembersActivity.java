@@ -21,7 +21,7 @@ import com.example.paypro.dataprovider.GroupMemberAdapter;
 import com.example.paypro.manager.ApplicationManager;
 import com.example.paypro.tasks.GroupCreationTask;
 
-public class GroupMembersActivity extends Activity {
+public class AddGroupMembersActivity extends Activity {
 
 	private Button addGroupMembers;
 	private ListView selectionList;
@@ -47,7 +47,7 @@ public class GroupMembersActivity extends Activity {
 			public void onClick(View v) {
 				Log.w("GROUPMEMBER", "Add group member clicked");
 				Intent i = new Intent();
-				i.setClass(GroupMembersActivity.this, FriendsActivity.class);
+				i.setClass(AddGroupMembersActivity.this, FriendsActivity.class);
 				// i.setAction(Intent.ACTION_VIEW);
 				System.out.println(i);
 				startActivityForResult(i, 1);

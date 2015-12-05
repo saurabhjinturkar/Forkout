@@ -1,5 +1,5 @@
 /**
- * 
+ *
  */
 package com.example.paypro.dataprovider;
 
@@ -30,31 +30,37 @@ public class GroupAdapter extends ArrayAdapter<Group> {
 	private static final String ID = "GroupAdapter";
 	private Context context;
 	private List<Group> groups;
-	
+
 	public GroupAdapter(Context context) {
 		super(context, R.layout.listitem_group);
 		this.context = context;
 		GroupsHelper gh = new GroupsHelper(context);
 		this.groups = gh.getallgroups();
 	}
-	
+
 	@Override
 	public View getView(int position, View convertView, ViewGroup parent) {
 		LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-		View view = inflater.inflate(R.layout.listitem_group, null);
-		
+
+		View view = null;
+		if (convertView == null) {
+			view = inflater.inflate(R.layout.listitem_group, null);
+		} else {
+			view = convertView;
+		}
+
 		TextView groupName = (TextView) view.findViewById(R.id.group_name);
 		TextView lastChat = (TextView) view.findViewById(R.id.last_chat);
 		ImageView image = (ImageView) view.findViewById(R.id.group_pic);
-		
+
 		groupName.setText(groups.get(position).getName());
 		lastChat.setText("Last chat here");
-		
+
 		try {
 			MessageDigest md = MessageDigest.getInstance("MD5");
 			byte[] mdbytes = md.digest(groups.get(position).getName().getBytes());
 //			String resultStr = new String(result);
-			 
+
 	        //convert the byte to hex format method 1
 	        StringBuffer sb = new StringBuffer();
 	        for (int i = 0; i < mdbytes.length; i++) {
@@ -64,7 +70,7 @@ public class GroupAdapter extends ArrayAdapter<Group> {
 	        Log.w(ID, "MD5" + resultStr);
 	        Log.w(ID, "COLOR CODE " + "#" + resultStr.substring(0,6));
 			int colorCode = Color.parseColor("#" + resultStr.substring(0,6));
-			
+
 			image.setBackgroundColor(colorCode);
 		} catch (NoSuchAlgorithmException e) {
 			// TODO Auto-generated catch block
@@ -73,12 +79,12 @@ public class GroupAdapter extends ArrayAdapter<Group> {
 		}
 		return view;
 	}
-	
+
 	@Override
 	public int getCount() {
 		return groups.size();
 	}
-	
+
 	@Override
 	public void add(Group object) {
 		super.add(object);
